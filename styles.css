@@ -24,3 +24,10 @@ section {
 footer small {
   letter-spacing: 0.5px;
 }
+
+
+/* About page specific styles */
+.about-highlight {
+  border-left: 6px solid #8b4513;  /* warm brown, hat-like color */
+  background-color: #fff8e7;       /* soft warm highlight */
+}
