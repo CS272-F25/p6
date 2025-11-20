@@ -1,29 +1,29 @@
 function roundToNearestEighth(x) {
   return Math.round(x * 8) / 8;
 }
-// function calculateHatSizeFromInches(circumferenceInches) {
-//   if (typeof circumferenceInches !== "number" || circumferenceInches <= 0) {
-//     throw new Error("circumferenceInches must be a positive number");
-//   }
+function calculateHatSizeFromCm() {
+  // 1. Get the input element
+  const input = document.getElementById("headSize");
 
-//   const rawSize = circumferenceInches / Math.PI;
-//   const rounded = Math.round(rawSize * 8) / 8; // nearest 1/8
-//   return rounded;
-// }
+  // 2. Read the value (comes in as a string)
+  const cm = parseFloat(input.value);
 
-// // Example:
-// console.log(calculateHatSizeFromInches(22)); // ~7.0
-// console.log(calculateHatSizeFromInches(23)); // ~7.25
-
-function calculateHatSizeFromCm(circumferenceCm) {
-  if (typeof circumferenceCm !== "number" || circumferenceCm <= 0) {
-    throw new Error("circumferenceCm must be a positive number");
+  // 3. Validate the number
+  const resultEl = document.getElementById("hatResult");
+  if (isNaN(cm) || cm <= 0) {
+    resultEl.textContent = "Please enter a valid head size in cm.";
+    return;
   }
 
-  const inches = circumferenceCm / 2.54;
+  // 4. Convert cm → inches
+  const inches = cm / 2.54;
+
+  // 5. Convert inches → hat size (US) and round to nearest 1/8
   const rawSize = inches / Math.PI;
-  const rounded = Math.round(rawSize * 8) / 8; // nearest 1/8
-  return rounded;
+  const roundedSize = Math.round(rawSize * 8) / 8;
+
+  // 6. Show result on the page
+  resultEl.textContent = `Estimated hat size: ${roundedSize.toFixed(3)} (US)`;
 }
 
 // Example:
