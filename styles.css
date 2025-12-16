@@ -31,3 +31,19 @@ footer small {
   border-left: 6px solid #8b4513;  /* warm brown, hat-like color */
   background-color: #fff8e7;       /* soft warm highlight */
 }
+
+/* Gallery image sizing */
+.gallery-img {
+  width: 100%;
+  max-width: 300px;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto;
+}
+
+figcaption {
+  font-size: 1rem;
+  text-align: center;
+  margin-top: 0.5rem;
+}
