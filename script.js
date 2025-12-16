@@ -26,7 +26,7 @@ function calculateHatSize() {
   const roundedSize = roundToNearestEighth(rawSize);
 
   // show result
-  resultEl.textContent = `Estimated hat size: ${roundedSize.toFixed(3)} (US)`;
+  resultEl.textContent = `Based on ${cm} cm, your US hat size is about ${roundedSize.toFixed(3)}.`;
 
   // save hat size so it stays next time
   localStorage.setItem("hatSizeUS", roundedSize.toFixed(3));
