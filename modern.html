@@ -5,35 +5,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Modern Hat Styles – Stop the Cap!</title>
 
-  <!-- Bootstrap -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 
-  <!-- Global stylesheet -->
-  <link rel="stylesheet"
-        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="styles.css">
 </head>
 
 <body class="bg-light">
-  <!-- Navbar -->
+
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-4">
     <div class="container">
       <a class="navbar-brand" href="index.html">Stop the Cap!</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="mainNav">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link" href="history.html">History</a></li>
-          <li class="nav-item"><a class="nav-link" href="modern.html">Modern Styles</a></li>
-          <li class="nav-item"><a class="nav-link active" href="about.html">About</a></li>
-          <li class="nav-item"><a class="nav-link active" href="gallery.html">Gallery</a></li>
-          <li class="nav-item"><a class="nav-link active" href="timeline.html">Timeline</a></li>
-          <li class="nav-item"><a class="nav-link active" href="faq.html">FAQ</a></li>
-
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-4">
-    <div class="container">
-      <a class="navbar-brand" href="index.html">Stop the Cap!</a>
 
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
         <span class="navbar-toggler-icon"></span>
@@ -41,84 +22,33 @@
 
       <div class="collapse navbar-collapse" id="mainNav">
         <ul class="navbar-nav ms-auto">
-          <!-- teammates will make these pages -->
-          <li class="nav-item"><a class="nav-link" href="history.html">History</a></li>
-          <li class="nav-item"><a class="nav-link" href="modern.html">Modern Styles</a></li>
-          <li class="nav-item"><a class="nav-link active" href="about.html">About</a></li>
-          <li class="nav-item"><a class="nav-link active" href="gallery.html">Gallery</a></li>
-          <li class="nav-item"><a class="nav-link active" href="timeline.html">Timeline</a></li>
-          <li class="nav-item"><a class="nav-link active" href="faq.html">FAQ</a></li>
-
+        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="world.html">World Styles</a></li>
+        <li class="nav-item"><a class="nav-link active" href="modern.html">Modern Styles</a></li>
+        <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+        <li class="nav-item"><a class="nav-link" href="timeline.html">Timeline</a></li>
+        <li class="nav-item"><a class="nav-link" href="faq.html">FAQ</a></li>
+        <li class="nav-item"><a class="nav-link" href="history.html">History</a></li>
         </ul>
       </div>
     </div>
   </nav>
 
-  <!-- Main content -->
   <main class="container mb-5">
-    <h1 class="mb-3">Modern Hat Styles 🧢</h1>
+    <h1 class="mb-3">Modern Hat Styles</h1>
     <p class="lead">
-      The hats below are loaded in dynamically from a live API using JavaScript.  
-      (Data comes from <a href="https://fakestoreapi.com/" target="_blank">Fake Store API</a>)
+      An overview of popular hat styles worn today, highlighting how modern fashion,
+      culture, and personal expression continue to shape headwear trends.
     </p>
 
-    <div class="row g-4 mt-3" id="hatList">
-      <!-- JS will insert cards here -->
-    </div>
+    <section id="styleList" class="row g-3"></section>
   </main>
 
   <footer class="text-center py-3 bg-dark text-white">
     <small>&copy; 2025 Stop the Cap! Hat Blog</small>
   </footer>
 
-  <script>
-    // fetch live data from Fake Store API
-    fetch("https://fakestoreapi.com/products/category/men's%20clothing")
-      .then(res => res.json())
-      .then(items => {
-        const hatList = document.getElementById("hatList");
-        items.forEach(item => {
-          const div = document.createElement("div");
-          div.className = "col-12 col-md-4";
-
-          div.innerHTML = `
-            <article class="card h-100">
-              <img src="${item.image}" class="card-img-top" alt="${item.title}">
-              <div class="card-body">
-                <h5 class="card-title">${item.title}</h5>
-                <p class="card-text">
-                  <time>Modern Era</time><br>
-                  Price: $${item.price}
-                </p>
-              </div>
-            </article>
-          `;
-          hatList.appendChild(div);
-        });
-      })
-      .catch(err => {
-        console.error("Error loading from API:", err);
-        document.getElementById("hatList").innerHTML =
-          "<p>Could not load hat data right now. Please try again later.</p>";
-      });
-  </script>
-
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-</body>
-</html>
-<main class="container mb-5">
-  <h1 class="mb-3">Modern Hat Styles</h1>
-  <p class="lead">An overview of popular hat styles worn today, highlighting how modern fashion,
-  culture, and personal expression continue to shape headwear trends.
-</p>
-
-  <section id="styleList" class="row g-3"></section>
-</main>
-
-<footer class="text-center py-3 bg-dark text-white">
-  <small>&copy; 2025 Stop the Cap!</small>
-</footer>
-
-<script src="modern.js"></script>
+  <script src="modern.js"></script>
 </body>
 </html>
