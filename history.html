@@ -5,44 +5,35 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Stop the Cap! - Hat Blog</title>
 
-  <!-- Bootstrap (design library) -->
   <link rel="stylesheet"
         href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
-
-  <!-- Global stylesheet -->
+  
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="history_style.css">
+
 </head>
 <body class="bg-light">
 
-  <!-- Simple navbar -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-4">
     <div class="container">
       <a class="navbar-brand" href="index.html">Stop the Cap!</a>
-
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
         <span class="navbar-toggler-icon"></span>
       </button>
 
       <div class="collapse navbar-collapse" id="mainNav">
         <ul class="navbar-nav ms-auto">
-          <!-- teammates will make these pages -->
           <li class="nav-item"><a class="nav-link active" href="history.html">History</a></li>
           <li class="nav-item"><a class="nav-link" href="modern.html">Modern Styles</a></li>
           <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
           <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
           <li class="nav-item"><a class="nav-link" href="timeline.html">Timeline</a></li>
           <li class="nav-item"><a class="nav-link" href="faq.html">FAQ</a></li>
-
-
         </ul>
       </div>
     </div>
   </nav>
 
-  <script src="script.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-
-  <!-- Header -->
   <header class="container mb-4">
     <h1>History of Hats</h1>
     <p class="lead">
@@ -50,23 +41,63 @@
     </p>
   </header>
 
+  <section class="container">
+    
+    <div class="masonry-wrapper">
 
+      <div class="card">
+        <img src="Images/a41hhjfg9hq71.jpg" class="card-img-top" alt="Bearskin cap">
+        <div class="card-body">
+          <h5 class="card-title">Bearskin Cap</h5>
+          <p class="card-text">Worn by Ötzi the Iceman (c. 3300 BCE), this bearskin hat is one of the oldest known examples of headwear, designed purely for survival in harsh alpine climates.</p>
+        </div>
+      </div>
 
+      <div class="card">
+        <img src="images/pschent.jpg" class="card-img-top" alt="Pschent">
+        <div class="card-body">
+          <h5 class="card-title">Pschent (Double Crown)</h5>
+          <p class="card-text">The Double Crown of Ancient Egypt. It combined the Red Crown of Lower Egypt and the White Crown of Upper Egypt to symbolize the pharaoh's power over the unified lands.</p>
+        </div>
+      </div>
 
+      <div class="card">
+        <img src="images/lappvattnet.png" class="card-img-top" alt="Lappvattnet">
+        <div class="card-body">
+          <h5 class="card-title">The Lappvattnet</h5>
+          <p class="card-text">Based on textile fragments found in Sweden, this represents some of the earliest woven fabric in the Nordic region, showing that prehistoric headwear was both functional and crafted with skill.</p>
+        </div>
+      </div>
 
+      <div class="card">
+        <img src="images/kente kufi.jpg" class="card-img-top" alt="Kufi">
+        <div class="card-body">
+          <h5 class="card-title">Kente Kufi</h5>
+          <p class="card-text">A brimless, short, and rounded cap worn by men in many parts of Africa. This specific version features Kente cloth patterns, originating from the Ashanti Kingdom of Ghana, symbolizing royalty and wealth.</p>
+        </div>
+      </div>
 
+      <div class="card">
+        <img src="images/the-history-of-the-ballcap-1920s-spalding-philadelphia-style-caps-via-mlbcollectors-and-keymans-collectibles.jpg" class="card-img-top" alt="Baseball Cap">
+        <div class="card-body">
+          <h5 class="card-title">1920s Baseball Cap</h5>
+          <p class="card-text">Before the structured caps of today, baseball players wore soft wool caps with shorter brims. This 1920s Spalding style marks the transition from amateur headgear to the modern professional standard.</p>
+        </div>
+      </div>
 
+      <div class="card">
+        <img src="images/Vilmabanky.jpg" class="card-img-top" alt="Cloche Hat">
+        <div class="card-body">
+          <h5 class="card-title">Cloche Hat</h5>
+          <p class="card-text">The iconic "bell-shaped" hat of the 1920s Flapper era.  Designed to be worn low on the forehead, it was the perfect companion to the short bob haircuts that defined the decade's rebellion against Victorian norms.</p>
+        </div>
+      </div>
 
+    </div>
+  </section>
 
-
-
-
-
-
-
-
-
-
+  <script src="script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 </html>

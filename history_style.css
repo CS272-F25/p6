@@ -1,0 +1,29 @@
+
+    .masonry-wrapper {
+      /* splits the container into 3 columns */
+      column-count: 3; 
+      column-gap: 1.5rem; /* gap between columns */
+    }
+
+    /* this targets the bootstrap cards inside our wrapper */
+    .masonry-wrapper .card {
+      /* ensures a card never gets cut in half across columns */
+      display: inline-block;
+      width: 100%;
+      break-inside: avoid; 
+      margin-bottom: 1.5rem; /* spacing at bottom of each card */
+    }
+
+    /* 2 columns on tablets */
+    @media (max-width: 992px) {
+      .masonry-wrapper {
+        column-count: 2;
+      }
+    }
+
+    /* 1 column on mobile phones */
+    @media (max-width: 576px) {
+      .masonry-wrapper {
+        column-count: 1;
+      }
+    }
