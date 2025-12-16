@@ -35,10 +35,18 @@ function calculateHatSize() {
 // when the page loads, check if user already has a saved size
 window.addEventListener("DOMContentLoaded", () => {
   const savedSize = localStorage.getItem("hatSizeUS");
+  
+  // On index: still show welcome message in hatResult if it exists
   const resultEl = document.getElementById("hatResult");
-
-  if (savedSize) {
+  if (savedSize && resultEl) {
     resultEl.textContent = `Welcome back! Your saved hat size is ${savedSize} (US).`;
+  }
+
+  // On other pages: show it in the savedSizeMessage area if it exists
+  const savedSizeMessage = document.getElementById("savedSizeMessage");
+  if (savedSize && savedSizeMessage) {
+    savedSizeMessage.textContent = `Your saved hat size is ${savedSize} (US).`;
+    savedSizeMessage.classList.remove("d-none");
   }
 });
 
