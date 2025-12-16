@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hat Gallery – Stop the Cap!</title>
+
+  <!-- Bootstrap -->
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+
+  <!-- Global stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="bg-light">
+
+  <!-- Navbar  -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-4">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">Stop the Cap!</a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="history.html">History</a></li>
+          <li class="nav-item"><a class="nav-link" href="modern.html">Modern Styles</a></li>
+          <li class="nav-item"><a class="nav-link active" href="gallery.html">Gallery</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Header -->
+  <header class="container mb-4">
+    <h1 class="mb-2">Hat Gallery</h1>
+    <p class="lead">
+      A visual showcase of common hat styles, highlighting how form, function,
+      and fashion come together across different designs.
+    </p>
+  </header>
+
+  <!-- Gallery Section (same sizing as index.html) -->
+  <section class="container mb-5">
+    <div class="row g-3 justify-content-center">
+
+      <div class="col-12 col-md-4 text-center">
+        <img src="images/hat1.jpg" class="img-fluid rounded" alt="Fedora hat">
+        <p class="mt-2 fw-semibold">Fedora</p>
+      </div>
+
+      <div class="col-12 col-md-4 text-center">
+        <img src="images/hat2.jpg" class="img-fluid rounded" alt="Baseball cap">
+        <p class="mt-2 fw-semibold">Baseball Cap</p>
+      </div>
+
+      <div class="col-12 col-md-4 text-center">
+        <img src="images/hat3.jpg" class="img-fluid rounded" alt="Beanie hat">
+        <p class="mt-2 fw-semibold">Beanie</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="text-center py-3 bg-dark text-white">
+    <small>&copy; 2025 Stop the Cap! Hat Blog</small>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
